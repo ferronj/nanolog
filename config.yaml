@@ -1,0 +1,24 @@
+audio:
+  device: default          # Audio input device
+  format: wav
+  sample_rate: 16000
+  delete_after_transcribe: true
+
+transcription:
+  provider: whisper-api    # whisper-api | whisper-local
+  model: whisper-1         # For API; or "base", "small", "medium" for local
+  language: en
+
+planning:
+  model: claude-sonnet-4-20250514
+  max_plan_items: 50       # Soft cap before archiving completed items
+
+execution:
+  model: claude-sonnet-4-20250514
+  compute_budget_minutes: 60   # Max agent runtime per session
+  use_tmux: true
+  parallel_tasks: 2
+
+snapshots:
+  enabled: true
+  interval: before_update  # before_update | hourly | daily

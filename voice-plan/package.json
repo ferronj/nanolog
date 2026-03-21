@@ -1,0 +1,14 @@
+{
+  "name": "voice-plan",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*",
+    "mcp-server"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=apps/web",
+    "build": "npm run build --workspaces",
+    "mcp:build": "npm run build --workspace=mcp-server"
+  }
+}

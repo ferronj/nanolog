@@ -1,4 +1,4 @@
-# Voice Plan
+# NanoLog
 
 A personal productivity system where you speak your thoughts throughout the day, and an AI agent turns voice recordings into an evolving, executable action plan.
 

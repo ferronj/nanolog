@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { PlanItem as PlanItemType } from '@voice-plan/db';
+  import type { PlanItem as PlanItemType } from '@nanolog/db';
   import PlanItem from './PlanItem.svelte';
   import { onMount } from 'svelte';
 

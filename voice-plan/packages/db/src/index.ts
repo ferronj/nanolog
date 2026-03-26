@@ -12,3 +12,4 @@ export type {
   Effort,
 } from "./types.js";
 export { PLAN_STATUS, PRIORITY, EFFORT } from "./types.js";
+export { migrate } from "./migrate.js";

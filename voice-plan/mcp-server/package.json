@@ -1,11 +1,11 @@
 {
-  "name": "@voice-plan/mcp-server",
+  "name": "@nanolog/mcp-server",
   "version": "0.1.0",
   "private": true,
   "type": "module",
   "main": "./dist/index.js",
   "bin": {
-    "voice-plan-mcp": "./dist/index.js"
+    "nanolog-mcp": "./dist/index.js"
   },
   "scripts": {
     "build": "tsc",
@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.12.0",
-    "@voice-plan/db": "*"
+    "@nanolog/db": "*"
   },
   "devDependencies": {
     "typescript": "^5.7.0",

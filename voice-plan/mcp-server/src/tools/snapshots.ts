@@ -1,5 +1,5 @@
 import { asc } from "drizzle-orm";
-import { getDb, planItems, snapshots } from "@voice-plan/db";
+import { getDb, planItems, snapshots } from "@nanolog/db";
 
 export async function takeSnapshot() {
   const db = getDb();

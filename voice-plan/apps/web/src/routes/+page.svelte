@@ -1,6 +1,6 @@
 <script lang="ts">
   import PlanList from '$lib/components/PlanList.svelte';
-  import type { PlanItem } from '@voice-plan/db';
+  import type { PlanItem } from '@nanolog/db';
   import { onMount } from 'svelte';
 
   let items: PlanItem[] = $state([]);

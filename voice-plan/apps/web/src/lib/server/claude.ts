@@ -1,7 +1,7 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { env } from "$env/dynamic/private";
 import { retry } from "./retry.js";
-import type { PlanItem } from "@voice-plan/db";
+import type { PlanItem } from "@nanolog/db";
 
 // System prompt ported from planner.py lines 22-38
 const SYSTEM_PROMPT = `You are a personal productivity assistant. Your job is to parse voice transcripts and extract actionable items, then merge them into the user's existing plan.

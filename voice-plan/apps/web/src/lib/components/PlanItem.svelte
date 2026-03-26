@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { PlanItem } from '@voice-plan/db';
+  import type { PlanItem } from '@nanolog/db';
 
   let { item, onStatusChange, onDelete }: {
     item: PlanItem;

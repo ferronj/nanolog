@@ -1,7 +1,7 @@
 import { json } from "@sveltejs/kit";
 import type { RequestHandler } from "./$types";
 import { initDb } from "$lib/server/db";
-import { planItems } from "@voice-plan/db";
+import { planItems } from "@nanolog/db";
 import { asc, desc } from "drizzle-orm";
 
 // GET /api/plan — list all plan items

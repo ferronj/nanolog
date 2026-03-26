@@ -1,5 +1,5 @@
 import { desc } from "drizzle-orm";
-import { getDb, transcripts } from "@voice-plan/db";
+import { getDb, transcripts } from "@nanolog/db";
 
 export async function getRecentTranscripts(limit: number = 5) {
   const db = getDb();

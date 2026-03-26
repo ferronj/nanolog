@@ -1,7 +1,7 @@
 import { json, error } from "@sveltejs/kit";
 import type { RequestHandler } from "./$types";
 import { initDb } from "$lib/server/db";
-import { transcripts } from "@voice-plan/db";
+import { transcripts } from "@nanolog/db";
 import { transcribeAudio } from "$lib/server/whisper";
 
 // POST /api/transcribe — upload audio, get transcript

@@ -1,5 +1,5 @@
 import { eq, asc, desc } from "drizzle-orm";
-import { getDb, planItems, type PlanStatus, type Priority, type Effort } from "@voice-plan/db";
+import { getDb, planItems, type PlanStatus, type Priority, type Effort } from "@nanolog/db";
 
 export async function getPlan() {
   const db = getDb();

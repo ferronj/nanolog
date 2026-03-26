@@ -1,7 +1,7 @@
 import { json } from "@sveltejs/kit";
 import type { RequestHandler } from "./$types";
 import { initDb } from "$lib/server/db";
-import { snapshots } from "@voice-plan/db";
+import { snapshots } from "@nanolog/db";
 import { desc } from "drizzle-orm";
 
 // GET /api/snapshots — list recent snapshots

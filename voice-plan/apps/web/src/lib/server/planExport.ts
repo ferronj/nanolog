@@ -1,4 +1,4 @@
-import type { PlanItem } from "@voice-plan/db";
+import type { PlanItem } from "@nanolog/db";
 
 /**
  * Render plan items as markdown matching the original plan.md format.
@@ -10,7 +10,7 @@ export function renderPlanMarkdown(items: PlanItem[]): string {
   const done = items.filter((i) => i.status === "done");
 
   let md = "# Action Plan\n\n";
-  md += "> Auto-updated by the voice-plan system.\n\n";
+  md += "> Auto-updated by the nanolog system.\n\n";
 
   md += "## In Progress\n\n";
   for (const item of inProgress) {

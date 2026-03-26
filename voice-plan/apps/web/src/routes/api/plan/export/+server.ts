@@ -1,6 +1,6 @@
 import type { RequestHandler } from "./$types";
 import { initDb } from "$lib/server/db";
-import { planItems } from "@voice-plan/db";
+import { planItems } from "@nanolog/db";
 import { asc } from "drizzle-orm";
 import { renderPlanMarkdown } from "$lib/server/planExport";
 

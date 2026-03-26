@@ -3,7 +3,7 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
-import { createDb } from "@voice-plan/db";
+import { createDb } from "@nanolog/db";
 import {
   getPlan,
   getPendingTasks,
@@ -15,12 +15,12 @@ import {
 import { getRecentTranscripts } from "./tools/transcripts.js";
 import { takeSnapshot } from "./tools/snapshots.js";
 
-// Initialize database from environment
-const dbUrl = process.env.TURSO_DATABASE_URL;
+// Initialize database from environment (supports both Turso and local SQLite)
+const dbUrl = process.env.TURSO_DATABASE_URL ?? process.env.DATABASE_URL;
 const dbToken = process.env.TURSO_AUTH_TOKEN;
 
 if (!dbUrl) {
-  console.error("TURSO_DATABASE_URL environment variable is required");
+  console.error("DATABASE_URL or TURSO_DATABASE_URL environment variable is required");
   process.exit(1);
 }
 
@@ -28,7 +28,7 @@ createDb({ url: dbUrl, authToken: dbToken });
 
 // Create MCP server
 const server = new McpServer({
-  name: "voice-plan",
+  name: "nanolog",
   version: "0.1.0",
 });
 
